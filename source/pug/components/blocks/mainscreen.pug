@@ -1,0 +1,29 @@
+mixin mainscreen()
+  section.mainscreen
+    - const repeat = [1, 2, 3]
+    .container
+      .mainscreen__slider
+        .main-slider
+          each item in repeat
+            .main-slider__slide
+              .main-slider__slide-desc
+                h1.main-slider__title.title.title--h1
+                  span Заголовок для слайдера
+                p.main-slider__paragraph Краткое описание УТП продукта, максимально две строки текста
+                button(type="button" data-open-modal="feedback").main-slider__btn.cta-button.btn.btn--blue-bg Смотреть решение
+              .main-slider__slide-img
+                +img("content", "user", "png", "Пользователь")
+                +icon("orders", 172, 45)(data-position="orders")
+                +icon("report", 336, 322)(data-position="report")
+                +icon("rates", 355, 66)(data-position="rates")
+                +icon("users", 172, 45)(data-position="users")
+                +icon("analitics", 172, 45)(data-position="analitics")
+                +icon("sales", 169, 104)(data-position="sales")
+
+        .main-slider__nav
+
+          button.btn.btn--prev.main-slider__btn-prev(type="button", aria-label="slide prev", aria-pressed="false")
+            +icon("arrow-prev", 15, 11)
+
+          button.btn.btn--next.main-slider__btn-next(type="button", aria-label="slide next", aria-pressed="false")
+            +icon("arrow-next", 15, 11)

@@ -1,0 +1,38 @@
+.title {
+  font-weight: 700;
+}
+
+.title--h1 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.title--h2 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.title--h1 span,
+.title--h2 span {
+  background: linear-gradient(112.17deg, #39C7EC 3.35%, #39C7EC 3.36%, #0050EC 97.39%);
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 767px) {
+.title--h1 span,
+  .title--h2 span {
+    // background: none;
+    // color: #202021;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .title--h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}

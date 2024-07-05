@@ -1,0 +1,8 @@
+mixin business-development(title, paragraph, buttonText)
+  section.business-development
+    .container
+      .business-development__content
+        .business-development__desc
+          h2.business-development__title #{title}
+          p.business-development__paragraph #{paragraph}
+        button(type="button" data-open-modal="feedback").business-development__btn.btn.btn--light-bg #{buttonText}

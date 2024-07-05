@@ -11,8 +11,53 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "wixmadefordisplay";
 
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src: url("../fonts/wixmadefordisplay-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "wixmadefordisplay";
+
+  font-display: swap;
+  src: url("../fonts/wixmadefordisplay-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "wixmadefordisplay";
+
+  font-display: swap;
+  src: url("../fonts/wixmadefordisplay-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "wixmadefordisplay";
+
+  font-display: swap;
+  src: url("../fonts/wixmadefordisplay-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "abel";
+
+  font-display: swap;
+  src: url("../fonts/abel-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "abel";
+
+  font-display: swap;
+  src: url("../fonts/abel-regular.woff2") format("woff2");
 }

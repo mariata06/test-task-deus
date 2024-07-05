@@ -1,0 +1,33 @@
+mixin products()
+  section.products
+    .container
+      .products__content
+        .products__desc
+          h2.products__title Продукты для 
+            span eCom
+          p.products__paragraph Используйте готовые продукты от нашей компании или закажите персональную разработку.
+
+        ul.products__list
+          li.products__item
+            .products__icon
+              +icon("icon-marketplace", 120, 120)
+            h3.products__item-title Продажи на маркетплейсах
+            p.products__item-paragraph Автоматизация продаж на универсальных маркетплейсах
+
+          li.products__item
+            .products__icon
+              +icon("icon-buy", 120, 120)
+            h3.products__item-title Интернет-магазин
+            p.products__item-paragraph Автоматизация онлайн-продаж для вашего интернет-магазина
+
+          li.products__item
+            .products__icon
+              +icon("icon-big-cart", 120, 120)
+            h3.products__item-title Нишевые маркетплейсы
+            p.products__item-paragraph Управление собственным маркетплейсом
+
+          li.products__item
+            .products__icon
+              +icon("icon-big-search", 120, 120)
+            h3.products__item-title Шина данных (ESB)
+            p.products__item-paragraph Управление обменом данных и интеграции

@@ -1,2 +1,23 @@
 mixin modal-feedback()
-  p.modal__description Обычная модалка
+  form(id="feedbackForm")
+    p.modal__description Свяжитесь с нами
+      +custom-input({
+        inputId: "name",
+        inputName: "user-name",
+        inputPlaceholder: "Имя"
+      })
+      +custom-input({
+        inputId: "phone",
+        inputType: "tel",
+        inputName: "user-phone",
+        inputPlaceholder: "Телефон"
+      })
+      +custom-input({
+        inputId: "email",
+        inputType: "email",
+        inputName: "user-email",
+        inputPlaceholder: "Email"
+      })
+    button(type="submit" class="main-nav__btn cta-button btn btn--blue-bg") Свяжитесь с нами
+
+    p.modal__policy Нажимая «Отправить» вы соглашаетесь с Политикой конфиденциальности

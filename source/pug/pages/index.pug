@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "ProjectName" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Test task Deus" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = ""
@@ -11,8 +11,22 @@ block variables
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
-    +intro()
+    +mainscreen()
+    +product()
+    +features()
+    +business-development('Новые тренды и инструменты для развития бизнеса', 'Персональная эксперт-сессия', 'Получить бесплатно')
+    +products()
+    +warranty()
+    +task()
+    +benefit()
+    +business-development('Новые eCom тренды и инструменты для развития бизнеса', 'Персональная эксперт-сессия', 'Получить бесплатно')
+    +partners()
+    +accreditation()
+    +media()
 
 block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+    +modal-success()
+

@@ -1,13 +1,46 @@
 .header {
-  padding: 28px 0;
-
-  background-color: $color-neon-blue;
+  background-color: #fff;
+  padding: 17px 0;
 
   .container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
     color: $color-default-white;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header .container {
+    display: grid;
+    padding-right: 16px;
+    grid-template-areas:
+        "logo . . burger"
+        "menu menu menu menu";
+    grid-template-columns: 150px 1fr;
+  }
+
+  .header .container .main-nav__toggle {
+    grid-area: burger;
+  }
+
+  .header .container .header__logo {
+    // padding-right: 16px;
+    grid-area: logo;
+  }
+
+  .main-nav {
+    grid-area: menu;
+  }
+
+  .header .main-nav__toggle {
+    display: flex;
   }
 }

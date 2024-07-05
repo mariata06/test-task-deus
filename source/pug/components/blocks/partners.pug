@@ -1,0 +1,25 @@
+mixin partners()
+  section.partners
+    .container
+      .partners__content
+        h2.partners__title.title.title--h2 С нами&nbsp;
+          span работают
+        .swiper.partners__swiper
+          .partners__slider.swiper-wrapper
+            each val, index in [1, 2, 3, 4, 5, 6, 7, 8]
+              //- li Element #{index + 1}: Some content here
+              .partners__slide.swiper-slide
+                .partners__slide-icon
+                  +img("content", "corona-auto", "png", "корона авто")
+                .partners__slide-icon
+                  +img("content", "expert", "png", "эксперт")
+                .partners__slide-icon
+                  +img("content", "alterego", "png", "alter ego home")
+                .partners__slide-icon
+                  +icon("agroimpex", 365, 164)
+                .partners__slide-icon
+                  +icon("olimp", 235, 75)
+                .partners__slide-icon МОДУЛЬ
+                .partners__slide-icon ВИНК
+
+          .partners__slider-pagination.swiper-pagination

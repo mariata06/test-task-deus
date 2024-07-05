@@ -1,0 +1,143 @@
+.accreditation {
+  background-color: #EFF1F7;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.accreditation__content {
+  padding: 21px 53px 21px 80px;
+  background: linear-gradient(112.17deg, #39C7EC 3.35%, #39C7EC 3.36%, #0050EC 97.39%);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.accreditation__title {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.accreditation__paragraph {
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 400px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.accreditation__certificate {
+  border: 1px solid rgba(#fff, 0.5);
+  padding: 16px 30px;
+  border-radius: 10px;
+  max-width: 570px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 112px;
+  align-items: center;
+}
+
+.accreditation__certificate svg {
+  margin-right: 30px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.accreditation__certificate p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0;
+  width: 400px;
+  position: relative;
+}
+
+.accreditation__certificate p:before {
+  content: "";
+  display: block;
+  height: 80px;
+  width: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: -30px;
+  top: -25%;
+}
+
+.accreditation__desc {
+  width: 810px;
+}
+
+@media (max-width: 1440px) {
+  .accreditation__content {
+    padding: 40px;
+  }
+
+  .accreditation__desc {
+    width: 50%;
+  }
+
+  img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .accreditation__content {
+    flex-direction: column;
+  }
+
+  .accreditation__desc {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .accreditation__certificate {
+    padding: 15px 30px;
+  }
+
+  .accreditation__certificate p:before {
+    left: -10px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .accreditation__content img {
+    position: absolute;
+  }
+
+  .accreditation .container {
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .accreditation__title {
+    word-break: break-all;
+    font-size: 40px;
+  }
+
+  .accreditation__certificate p {
+    width: 100%;
+  }
+
+  .accreditation__certificate p:before {
+    display: none;
+  }
+
+  .accreditation__content {
+    padding: 20px;
+  }
+
+  .accreditation__certificate {
+    padding: 15px;
+  }
+}

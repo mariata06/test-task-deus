@@ -1,0 +1,57 @@
+mixin task()
+  -
+    const taskItems = [
+      {
+        text: "Автоматизация бизнес-процессов"
+      },
+      {
+        text: "Создание B2B-порталав"
+      },
+      {
+        text: "Управление товарными данными"
+      },
+      {
+        text: "Маркетинговые активности"
+      },
+      {
+        text: "Интеграция с маркетплейсами"
+      },
+      {
+        text: "Медиа-контент"
+      },
+      {
+        text: "Управление отзывами"
+      },
+      {
+        text: "Работа с заказами"
+      },
+      {
+        text: "Доставка и возвраты"
+      },
+      {
+        text: "Остатки и ценообразование"
+      },
+      {
+        text: "Взаимоотношения с клиентами"
+      },
+      {
+        text: "Аналитика"
+      },
+      {
+        text: "Нишевые маркетплейсы"
+      },
+      {
+        text: "Обмен данными"
+      },
+    ]
+
+  section.task
+    .container
+      .task__content
+        .task__title.title.title--h2
+          span Какие задачи&nbsp;
+          | решаем в eCommerce
+        .task__list-wrapper
+          .task__list
+            each task in taskItems
+              .task__item= task.text

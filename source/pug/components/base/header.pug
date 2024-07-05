@@ -1,17 +1,56 @@
 mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
+      //- {
+      //-   href: "index.html",
+      //-   text: "Главная"
+      //- },
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "Продукты",
+        linkIcon: true,
+        subMenu: [
+          {
+          subMenuLinkTitle: "Продажи на маркетплейсах",
+          subMenuLinkText: "Автоматизация продаж на универсальных маркетплейсах"
+          },
+          {
+          subMenuLinkTitle: "Интернет-магазинх",
+          subMenuLinkText: "Автоматизация онлайн-продаж для вашего интернет-магазина"
+          },
+          {
+          subMenuLinkTitle: "Нишевые маркетплейсы",
+          subMenuLinkText: "Управление собственным маркетплейсом"
+          },
+          {
+          subMenuLinkTitle: "Шина данных (ESB)",
+          subMenuLinkText: "Управление обменом данных и интеграции"
+          },
+        ]
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Платформа"
+      },
+       {
+        href: "#",
+        text: "Кейсы"
+      },
+       {
+        href: "#",
+        text: "Партнерам"
+      },
+       {
+        href: "#",
+        text: "Блог"
+      },
+       {
+        href: "#",
+        text: "О компании"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Контакты"
       },
     ]
 
@@ -19,12 +58,16 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +icon("logo-deus", 117, 46)
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logo-deus", 117, 46)
+      button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
+        +icon("icon-burger", 20, 20).btn-reset__burger
+        +icon("icon-cross", 25, 23).btn-reset__close
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
@@ -34,3 +77,13 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
+                if(link.linkIcon)
+                  +icon('icon-arrow', 24, 24)
+                if link.subMenu
+                  ul.main-nav__submenu
+                    each sublink in link.subMenu
+                      li.main-nav__submenu-item
+                        h4= sublink.subMenuLinkTitle
+                        p= sublink.subMenuLinkText
+
+          button(type="button" data-open-modal="feedback").main-nav__btn.cta-button.btn.btn--blue-bg Свяжитесь с нами

@@ -1,0 +1,372 @@
+.mainscreen__slider {
+  overflow: hidden;
+  position: relative;
+  border-radius: 40px;
+}
+
+.main-slider {
+  // max-width: 1170px;
+  // position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.5s ease-in-out;
+  // position: relative;
+}
+
+.main-slider .container {
+  padding: 0;
+}
+
+.main-slider__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.main-slider__slide-btn {
+  margin-top: -12px;
+}
+
+.main-slider__btn-next,
+.main-slider__btn-prev {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  box-shadow:
+    15px 10px 30px 0px rgba(#D2DAE3, 0.7),
+    5px 5px 13px 0px rgba(#D2DAE3, 0.3),
+    -5px -5px 10px 0px #FFFFFF,
+    -20px -20px 34px 0px rgba(#FFFFFF, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.main-slider__btn-next:hover,
+.main-slider__btn-prev:hover {
+  box-shadow:
+  // -15px -10px 30px 0px rgba(210, 218, 227, 0.7),
+  // -5px -5px 13px 0px rgba(210, 218, 227, 0.3),
+  // 5px 5px 10px 0px #FFFFFF,
+  // 20px 20px 34px 0px rgba(255, 255, 255, 0.8);
+
+  2px 2px 12px 0px rgba(#88A5BF, 0.6) inset,
+  -2px -3px 6px 0px rgba(#88A5BF, 0.3) inset,
+  -3px -4px 6px 0px #FFFFFF inset;
+}
+
+.main-slider__nav {
+  position: absolute;
+  width: 139px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  bottom: 40px;
+  left: 80px;
+}
+
+.main-slider__slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 176px;
+  border-radius: 40px;
+  background-color: #EFF1F7;
+  padding: 40px 80px;
+  min-height: 580px;
+  position: relative;
+}
+
+.main-slider__slide-img {
+  position: absolute;
+  right: 78px;
+  bottom: 0;
+  height: 100%;
+  width: 645px;
+}
+
+.main-slider__slide-img img {
+  position: absolute;
+  right: 106px;
+  bottom: 0;
+  // width: 446px;
+  // height: 554px;
+}
+
+.main-slider__slide-img svg[data-position="orders"] {
+  position: absolute;
+  right: 60px;
+  top: -185px;
+  right: 59px;
+  top: 180px;
+}
+
+.main-slider__slide-img svg[data-position="analitics"] {
+  position: absolute;
+  left: 70px;
+  bottom: 182px;
+}
+
+.main-slider__slide-img svg[data-position="sales"] {
+  position: absolute;
+  left: 68px;
+  top: 138px;
+}
+
+.main-slider__slide-img svg[data-position="rates"] {
+  position: absolute;
+  bottom: 32px;
+  right: 196px;
+}
+
+.main-slider__slide-img svg[data-position="report"] {
+  position: absolute;
+  right: -77px;
+  top: 260px;
+}
+
+.main-slider__slide-img svg[data-position="users"] {
+  bottom: 126px;
+  position: absolute;
+  left: 24px;
+}
+
+.main-slider__slide-desc {
+  padding-top: 90px;
+  width: 690px;
+}
+
+// .main-slider__slide-desc h1 {
+//   font-size: 50px;
+//   line-height: 60px;
+//   font-weight: 700;
+// }
+
+.main-slider__slide-desc h1 {
+  background: linear-gradient(112.17deg, #39C7EC 3.35%, #39C7EC 3.36%, #0050EC 97.39%);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.main-slider__paragraph {
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+// @media (max-width: 1169px) {
+//   .main-slider__slide {
+//     padding-left: 150px;
+//     padding-right: 150px;
+//   }
+// }
+
+// @media (max-width: 767px) {
+//   .main-slider__slide {
+//     flex-direction: column;
+//     justify-content: center;
+//     padding-left: 50px;
+//     padding-right: 50px;
+//   }
+
+//   .main-slider__title {
+//     margin-top: 20px;
+//     font-size: 36px;
+//   }
+
+//   .main-slider__btn-next svg,
+//   .main-slider__btn-prev svg {
+//     transform: scale(0.5);
+//   }
+
+//   .main-slider__btn-next svg {
+//     transform: rotate(180deg) scale(0.5);
+//   }
+
+//   .main-slider__btn-next {
+//     right: 20px;
+//   }
+
+//   .main-slider__btn-prev {
+//     left: 20px;
+//   }
+// }
+
+@media (max-width: 1690px) {
+  .main-slider__slide-desc {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .main-slider__slide-desc {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .main-slider__slide-img svg[data-position=report] {
+    transform: scale(0.7);
+    right: -90px;
+  }
+
+  .main-slider__slide-img svg[data-position=sales] {
+    position: absolute;
+    left: 130px;
+    top: 200px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .main-slider__slide-desc {
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .main-slider__slide {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-slider__slide-img {
+    right: -100px;
+    width: 70%;
+    right: 0;
+  }
+
+  .main-slider__slide-img svg[data-position=report] {
+    transform: scale(0.7);
+    right: 20px;
+  }
+  .main-slider__slide-img svg[data-position=rates] {
+    transform: scale(0.7);
+  }
+
+  .main-slider__slide-img svg[data-position=orders] {
+    transform: scale(0.7);
+    right: 100px;
+  }
+
+  .main-slider__slide-desc {
+    width: 50%;
+    padding-top: 30px;
+  }
+
+  .main-slider__slide {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .mainscreen .container {
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .main-slider__slide-desc {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .main-slider__paragraph {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main-slider__slide-desc {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main-slider__slide {
+    padding: 16px 20px;
+  }
+
+  .main-slider__nav {
+    left: 50%;
+    bottom: unset;
+    top: 40%;
+    transform: translateX(-50%);
+  }
+
+  .main-slider__slide-img img {
+    position: absolute;
+    right: 106px;
+    bottom: 0;
+    width: 80%;
+  }
+
+  .main-slider__slide-img svg[data-position=orders] {
+    right: 100px;
+    top: unset;
+    bottom: 100px;
+  }
+
+  .main-slider__slide-img svg[data-position=analitics],
+  .main-slider__slide-img svg[data-position=users] {
+    transform: scale(0.8);
+  }
+  .main-slider__slide-img svg[data-position=rates] {
+    position: absolute;
+    bottom: 5px;
+    right: 400px;
+  }
+
+  .main-slider__slide-img svg[data-position=report] {
+    -webkit-transform: scale(.7);
+    transform: scale(.5);
+    right: -80px;
+    top: unset;
+    bottom: -50px;
+  }
+
+  .main-slider__slide-img svg[data-position=sales] {
+    position: absolute;
+    left: -144px;
+    top: 200px;
+    top: unset;
+    bottom: 120px;
+    transform: scale(0.5);
+  }
+
+  .main-slider__slide-img svg[data-position=analitics] {
+    position: absolute;
+    left: -122px;
+    bottom: 90px;
+    transform: scale(0.5);
+  }
+
+  .main-slider__slide-img svg[data-position=orders] {
+    right: 11px;
+    top: unset;
+    bottom: 170px;
+  }
+
+  .main-slider__slide-img svg[data-position=users] {
+    bottom: 58px;
+    position: absolute;
+    left: -142px;
+    transform: scale(0.5);
+  }
+}

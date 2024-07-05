@@ -1,0 +1,45 @@
+mixin benefit()
+  section.benefit
+    .container
+      .tabs
+        h2.benefit__title.title.title--h2 Почему 
+          span Мы
+        .tab__wrapper.scroll-container
+          ul.tab-list
+            each tab, index in ['Ключевые преимущества', 'Специально для eCommerce', '3 вид преимуществ']
+              li.tab(class=index === 0 ? 'active' : '', data-tab=index) #{tab}
+        .tab-content
+          each content, index in ['Content for Tab 1', 'Content for Tab 2', 'Content for Tab 3']
+            .tab-panel(class=index === 0 ? 'active' : '', data-tab=index).swiper
+
+              .tab-panel__grid.swiper-wrapper
+                .tab-panel__item.swiper-slide
+                  h3 Российское ПО
+                  p Свидетельство о регистрации Минцифры № АО-20221221-11257705008-3
+                  .tab-panel__icon
+                    +icon("icon-lock", 38, 38)
+                .tab-panel__item
+                  h3 Бизнес-консалтинг
+                  p Экономическая эффективность проектов
+                  .tab-panel__icon
+                    +icon("icon-zigzag-arrow", 38, 38)
+                .tab-panel__item
+                  h3 Онбординг и документация
+                  p Инструменты для успешного старта работ
+                  .tab-panel__icon
+                    +icon("icon-docs", 38, 38)
+                .tab-panel__item
+                  h3 Техническая поддержка 24/7
+                  p Обеспечение бесперебойной работы системы
+                  .tab-panel__icon
+                    +icon("icon-support", 38, 38)
+                .tab-panel__item
+                  h3 Скорость работы
+                  p Моментальная загрузка страниц с любым количество SKU
+                  .tab-panel__icon
+                    +icon("icon-clock", 38, 38)
+                .tab-panel__item
+                  h3 Актуальность и развитие
+                  p Улучшение функциональности, обеспечение безопасности, устранение ошибок
+                  .tab-panel__icon
+                    +icon("icon-security", 38, 38)

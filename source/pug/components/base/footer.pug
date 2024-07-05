@@ -1,3 +1,48 @@
 mixin footer(footerMods)
+
   footer.footer(class=footerMods)
     .container
+      span.footer__logo
+        +icon("logo-blue", 117, 46)
+      nav.footer-nav
+        .footer-nav__wrapper
+          ul.footer-nav__list
+            li.footer-nav__item Продукты
+              ul.footer-nav__submenu-list
+                li.footer-nav__submenu-item
+                  a(href="#") Продажи на маркетплейсах
+                li.footer-nav__submenu-item
+                  a(href="#") Интернет-магазин
+                li.footer-nav__submenu-item
+                  a(href="#") Нишевые маркетплейсы
+                li.footer-nav__submenu-item
+                  a(href="#") Шина данных
+
+          ul.footer-nav__list
+            li.footer-nav__item
+              a(href="#") Платформа
+            li.footer-nav__item
+              a(href="#") Кейсы
+            li.footer-nav__item
+              a(href="#") Партнерам
+
+          ul.footer-nav__list
+            li.footer-nav__item
+              a(href="#") Блог
+            li.footer-nav__item
+              a(href="#") О компании
+            li.footer-nav__item
+              a(href="#") Контакты
+
+          ul.footer-nav__list
+            li.footer-nav__item
+              a(href="tel:+76667772211") +7 666 777 22 11
+            li.footer-nav__item
+              a(href="mailto:test@mail.ru") test@mail.ru
+            li.footer-nav__item Одинцово, ул. Молодежная, 46
+
+    .container
+      .footer__copyright
+        a(href="#") Политика конфиденциальности
+        .footer__dev Разработка
+         +icon('logo-small', 49, 20)

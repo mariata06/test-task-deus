@@ -1,0 +1,71 @@
+mixin product()
+  section.product
+    -
+      const slides = [
+        {
+          text: "Автоматизация продаж <span>увеличивает скорость</span> обуслуживания клиентов <span>на 42%</span>",
+          data: "42",
+          percentage: "42%"
+        },
+        {
+          text: "<span>75% российских B2B-компаний</span> внедряют каналы продаж в eCommerce",
+          data: "75",
+          percentage: "75%"
+        },
+        {
+          text: "Нишевые B2B-маркетплейсы ежегодно<span> растут на 55%</span>",
+          data: "55",
+          percentage: "55%"
+        },
+        {
+          text: "Бизнес, который не автоматизирует продажи, ежегодно <span>теряет до 30% выручки</span>",
+          data: "30",
+          percentage: "30%"
+        },
+        {
+          text: "Автоматизация продаж <span>увеличивает скорость</span> обуслуживания клиентов <span>на 42%</span>",
+          data: "42",
+          percentage: "42%"
+        },
+        {
+          text: "<span>75% российских B2B-компаний</span> внедряют каналы продаж в eCommerce",
+          data: "75",
+          percentage: "75%"
+        },
+        {
+          text: "Нишевые B2B-маркетплейсы ежегодно<span> растут на 55%</span>",
+          data: "55",
+          percentage: "55%"
+        },
+        {
+          text: "Бизнес, который не автоматизирует продажи, ежегодно <span>теряет до 30% выручки</span>",
+          data: "30",
+          percentage: "30%"
+        },
+      ]
+    .container
+      .product__content
+        h2.product__title.title.title--h2
+          span Название продукта&nbsp;
+          | для средних и крупных торговых и производственных компаний
+        .swiper.product__swiper
+          .product__slider.product-slider.swiper-wrapper
+            each slide in slides
+              .product__slide.swiper-slide
+                .product__slide-chart-wrapper
+                  .product__slide-pie-chart(data-percentage=slide.data)
+                    span=slide.percentage
+                .product__slide-desc!= slide.text
+
+          .product__slider-pagination.swiper-pagination
+
+          .product__slider-nav
+            .swiper-button-prev.btn.btn--prev.product__slider-btn-prev
+              +icon("arrow-prev", 15, 11)
+            .swiper-button-next.btn.btn--next.product__slider-btn-next
+              +icon("arrow-next", 15, 11)
+                //- button.btn.btn--prev.product__slider-btn-prev(type="button", aria-label="slide prev", aria-pressed="false")
+              //- +icon("arrow-prev", 15, 11)
+
+            //- button.btn.btn--next.product__slider-btn-next(type="button", aria-label="slide next", aria-pressed="false")
+            //-   +icon("arrow-next", 15, 11)

@@ -1,10 +1,4 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
 
@@ -22,5 +16,122 @@
 
   @include hover-focus {
     opacity: 0.8;
+  }
+}
+
+.btn--blue-bg {
+  background-color: #0056FE;
+  color: #fff;
+  padding: 20px 30px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  transition: all 0.3s ease-out;
+  border-radius: 10px;
+  min-height: 40px;
+}
+
+.btn--blue-bg:hover {
+  background-color: #00308E;
+}
+
+.btn--prev,
+.btn--next {
+  width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    box-shadow:
+      15px 10px 30px 0px rgba(#D2DAE3, 0.7),
+      5px 5px 13px 0px rgba(#D2DAE3, 0.3),
+      -5px -5px 10px 0px #FFFFFF,
+      -20px -20px 34px 0px rgba(#FFFFFF, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s ease-out;
+}
+
+.btn--next:hover,
+.btn--prev:hover {
+  box-shadow:
+    // -15px -10px 30px 0px rgba(210, 218, 227, 0.7),
+    // -5px -5px 13px 0px rgba(210, 218, 227, 0.3),
+    // 5px 5px 10px 0px #FFFFFF,
+    // 20px 20px 34px 0px rgba(255, 255, 255, 0.8);
+
+    2px 2px 12px 0px rgba(#88A5BF, 0.6) inset,
+    -2px -3px 6px 0px rgba(#88A5BF, 0.3) inset,
+    -3px -4px 6px 0px #FFFFFF inset;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  // display: none;
+}
+
+.btn--light-bg {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #202021;
+  padding: 20px 52px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+@media (max-width: 1440px) {
+  .btn--blue-bg {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 170px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .btn--blue-bg,
+  .btn--light-bg {
+    padding: 10px 20px;
+    font-size: 14px;
+    min-width: 170px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .btn-reset {
+    display: flex;
+  }
+}
+
+.btn-reset .btn-reset__burger {
+  width: 30px;
+  height: 30px;
+  // display: none;
+}
+
+.btn-reset .btn-reset__close {
+  display: none;
+  width: 23px;
+  height: 23px;
+}
+
+.btn-reset.is-active {
+  .btn-reset__close {
+    display: block;
+  }
+  .btn-reset__burger {
+    display: none;
   }
 }
